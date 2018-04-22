@@ -1,0 +1,79 @@
+{
+  "name": "projectx-api",
+  "scripts": {
+    "test": "make test",
+    "precommit": "lint-staged && tsc",
+    "heroku-postbuild": "make compile"
+  },
+  "type-check": "tsc",
+  "lint-staged": {
+    "{src,test}/**/*.ts": [
+      "prettier --write --loglevel warn",
+      "tslint --force --fix",
+      "git add"
+    ]
+  },
+  "resolutions": {
+    "babel-core": "^7.0.0-bridge.0"
+  },
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "boom": "^7.2.0",
+    "dotenv": "^5.0.0",
+    "firebase-admin": "^5.11.0",
+    "ip": "^1.1.5",
+    "joi": "^13.1.1",
+    "jsonwebtoken": "^8.2.0",
+    "knex": "^0.14.2",
+    "koa": "^2.4.1",
+    "koa-bodyparser": "^4.2.0",
+    "koa-compose": "^4.0.0",
+    "koa-jwt": "^3.3.1",
+    "koa-router": "^7.4.0",
+    "objection": "^0.9.4",
+    "pg": "^7.4.1",
+    "ramda": "^0.25.0",
+    "zxcvbn": "^4.4.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.40",
+    "@babel/core": "^7.0.0-beta.40",
+    "@babel/node": "^7.0.0-beta.40",
+    "@babel/preset-env": "^7.0.0-beta.40",
+    "@babel/preset-stage-3": "^7.0.0-beta.40",
+    "@babel/preset-typescript": "^7.0.0-beta.40",
+    "@types/bcrypt": "^1.0.0",
+    "@types/boom": "^7.2.0",
+    "@types/ip": "0.0.30",
+    "@types/jest": "^22.1.1",
+    "@types/joi": "^13.0.7",
+    "@types/jsonwebtoken": "^7.2.6",
+    "@types/knex": "^0.14.5",
+    "@types/koa": "^2.0.44",
+    "@types/koa-bodyparser": "^4.2.0",
+    "@types/koa-compose": "^3.2.2",
+    "@types/koa-jwt": "^3.3.0",
+    "@types/koa-router": "^7.0.27",
+    "@types/node": "^9.4.0",
+    "@types/ramda": "^0.25.17",
+    "@types/supertest": "^2.0.4",
+    "@types/zxcvbn": "^4.4.0",
+    "babel-plugin-module-resolver": "^3.1.0",
+    "husky": "^0.14.3",
+    "jest": "^22.1.4",
+    "lint-staged": "^6.1.0",
+    "nodemon": "^1.14.12",
+    "prettier": "^1.10.2",
+    "supertest": "^3.0.0",
+    "ts-jest": "^22.0.3",
+    "ts-node": "^5.0.1",
+    "tslint": "^5.9.1",
+    "tslint-config-prettier": "^1.7.0",
+    "typescript": "^2.7.1"
+  },
+  "license": "ISC",
+  "engines": {
+    "node": "^9.9.0",
+    "npm": "^5.6.0"
+  }
+}

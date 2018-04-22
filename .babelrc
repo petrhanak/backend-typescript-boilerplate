@@ -1,0 +1,20 @@
+{
+  "presets": [
+    ["@babel/env", {
+      "targets": {
+        "node": "current"
+      }
+    }],
+    "@babel/stage-3",
+    "@babel/typescript"
+  ],
+  "plugins": [
+    ["module-resolver", {
+      "extensions": [".js", ".ts"],
+      "root": ["."],
+      "alias": {
+        "~": "./src",
+      }
+    }]
+  ]
+}

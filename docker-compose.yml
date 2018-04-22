@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+
+  database:
+    container_name: projectx-database
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: projectx
+      POSTGRES_PASSWORD: 1234
+    ports:
+      - 5432:5432
